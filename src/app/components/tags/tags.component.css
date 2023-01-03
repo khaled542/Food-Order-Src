@@ -1,0 +1,15 @@
+
+.tag
+{
+    background-color: #e72929;
+    color:#fff;
+    padding: 5px 10px;
+    margin:0 10px;
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.tag:hover
+{
+    opacity: 50%;
+}

@@ -1,0 +1,42 @@
+<div class="container my-5 ">
+    <div *ngIf="isEmpty" class="notFound text-center">
+        <p>your cart is empty</p>
+        <a routerLink="/home" class="shopingBtn">go shopping</a>
+    </div>
+    <div *ngIf="!isEmpty" class="row gy-3">
+        <div class="col-md-9 ">
+            <div class="content itmesContainer ">
+                <div *ngFor="let item of cartItems.cartItems" class="foodItems ">
+                    <div class="img w-25 "><img [src]="item.food.imgSrc" alt="" class=''></div>
+                    <div class="prop w-75 ">
+                        <div class="name"><a routerLink="foodpage/{{item.food.id}}">{{item.food.name}}</a></div>
+                        <div class="count">
+                            <select #count (change)="changeCount(count.value,item.food.id)">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                        <div class="price">{{item.price|currency}}</div>
+                        <div class="">
+                            <button class="removeBtn" (click)="removeFromCart(item.food.id)">remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 ">
+            <div class="content total">
+                <div>
+                    <div class="foodCount">{{cartItems.totalCount}}</div>
+                    <div class="totalPrice mb-2">{{cartItems.totalPrice}}</div>
+                    <div><a routerLink="">proceed to cehckout</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

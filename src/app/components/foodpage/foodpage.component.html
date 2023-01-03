@@ -1,0 +1,42 @@
+<div class="container my-5">
+    <div *ngIf="!food" class="notFound text-center">
+        <p>your cart is empty</p>
+        <a routerLink="/home" class="shopingBtn">go shopping</a>
+    </div>
+    <div *ngIf="food" class="row gy-4">
+        <div class="col-md-6">
+            <div class="content img text-center">
+                <img [src]="food.imgSrc" [alt]="food.name" class="text-centerr">
+            </div>
+        </div>
+        <div *ngIf="food" class="col-md-6 ">
+            <div class="content foodContent">
+                <div class="mems">
+                    <div class="header d-flex justify-content-between">
+                        <h3>{{food.name}}</h3>
+                        <span *ngIf="food.favorite" class="heart">♥</span>
+                    </div>
+                    <div class="{{food.favorite?'':'notFavorite'}} mb-3">
+                        <star-rating [value]="food.star" [totalstars]="5" checkedcolor="red" uncheckedcolor="black"
+                            size="24px" [readonly]="true"></star-rating>
+                    </div>
+                    <div class="origins mb-4">
+                        <span *ngFor="let orig of food.origins" class="origin">{{orig}}</span>
+                    </div>
+                    <div class="tags mb-3">
+                        <span *ngFor="let tag of food.tags" class="tag">{{tag}}</span>
+                    </div>
+                    <div class="time">
+                        <p>Time to cook about 🕞 {{food.cookTime}} minutes</p>
+                    </div>
+                    <div class="price">
+                        <p>Price : {{food.price|currency}}</p>
+                    </div>
+                    <div class="bton ">
+                        <button class="form-control" (click)="addToCart()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

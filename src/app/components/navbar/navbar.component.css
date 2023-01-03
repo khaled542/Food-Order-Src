@@ -1,0 +1,28 @@
+.navbar
+{
+    border-bottom: 1px solid #e72929;
+    padding : 0;
+}
+
+a
+{
+    color:#af1313;
+}
+
+a:hover
+{
+    /* background-color: #e72929; */
+    color: white;
+}
+
+li
+{
+    padding: 5px ;
+}
+
+li:hover
+{
+    background-color: #e72929;
+}
+
+

@@ -1,0 +1,145 @@
+
+.itmesContainer
+{
+    border: 1px solid #e72929;
+    border-radius: 2rem;
+}
+
+.foodItems
+{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e72929;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.itmesContainer :last-child
+{
+    border: none;
+}
+
+img
+{
+    width:80%;
+    border-radius: 100rem;
+}
+
+.prop
+{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.removeBtn
+{
+    border:none;
+    outline: none;
+    border-radius: 1rem;
+    padding: .5rem;
+    opacity: .7;
+    color: #e72929;
+}
+
+.removeBtn:hover
+{
+    opacity: 1;
+}
+
+.total
+{
+    border: 1px solid #e72929;
+    border-radius: 2rem;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.foodCount::before
+{
+    content: 'Count : ';
+    color: #e72929;
+    font-size: 1.3rem;
+}
+
+.totalPrice::before
+{
+    content: 'Total Price : ';
+    color: #e72929;
+    font-size: 1.3rem;
+}
+
+.total a
+{
+    bottom: .7rem;
+    background-color: #e72929;
+    color: #fff;
+    width: 85%;
+    border-radius: 2rem;
+    padding: .8rem;
+    text-align: center;
+}
+
+.total a:hover
+{
+    opacity: .7;
+}
+
+.shopingBtn
+{
+    background-color: #e72929;
+    color:#fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.shopingBtn:hover
+{
+    opacity:.7;
+    cursor: pointer;
+}
+
+
+/*  / ///////////////////////////////////////  media quiery ////////////////////////////////  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+ {
+    img
+    {
+        width: 100%;
+    }
+
+    .col-md-9,.col-md-3 
+    {
+        padding: .3rem;
+    }
+
+    .foodItems
+    {
+        padding: .3rem;
+    }
+ }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 767px)
+{
+   
+}
+ 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+    .col-md-9,.col-md-3 
+    {
+        width: 100%;
+    }
+}
+ 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

@@ -1,0 +1,7 @@
+<div class="container mb-5 m-auto">
+    <div class="d-flex flex-wrap justify-content-center">
+        <a *ngFor="let tag of tags" class="tag text-break my-1" (click)="setTagName(tag.name)">{{tag.name}} ({{tag.count}})</a>
+    </div>
+</div>
+
+<!--  routerLink="/tags/{{tag.name}}" -->
